@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red" >
+	<GridView
+	    android:id="@+id/gridView1"
+	    android:numColumns="9"
+	    android:gravity="center"
+	    android:columnWidth="20dp"
+	    android:background="@color/translucent_red"
+	    android:stretchMode="columnWidth"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" 
+	    android:horizontalSpacing="5dp"
+	    android:verticalSpacing="5dp">
+ 
+	</GridView>
+</RelativeLayout>

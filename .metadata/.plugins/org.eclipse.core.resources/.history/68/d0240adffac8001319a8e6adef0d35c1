@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Test4</string>
+    <string name="hello_world">Hello ALISHA and her MOM!</string>
+    <string name="action_settings">Settings</string>
+    <string name="reset_button">Reset</string>
+    <string name="solve_button">Reset</string>
+</resources>

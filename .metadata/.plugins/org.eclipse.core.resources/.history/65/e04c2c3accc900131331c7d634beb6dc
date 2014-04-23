@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/opaque_red"
+    android:gravity="center"
+    android:minHeight="10dp"
+    android:paddingTop="1dip"
+    android:paddingLeft="1dip"
+    android:maxLength="1"
+    android:textAppearance="?android:attr/textAppearanceLarge" 
+    android:textStyle="bold"/>

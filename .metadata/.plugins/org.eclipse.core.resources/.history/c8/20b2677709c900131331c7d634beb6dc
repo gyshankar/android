@@ -1,0 +1,74 @@
+package com.example1.test4;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.GridView;
+
+public class MainActivity extends Activity {
+
+	GridView gridView;
+	Button resetButton;
+	 
+ 
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+ 
+		setContentView(R.layout.activity_main);
+ 
+		reset();
+		
+		resetButton = (Button) findViewById(R.id.button1);
+		resetButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				reset();
+				
+			}
+			
+		});
+ 
+		gridView.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View v,
+				int position, long id) {
+			   Toast.makeText(getApplicationContext(),
+				((TextView) v).getText(), Toast.LENGTH_SHORT).show();
+			}
+		});
+ 
+	}
+
+
+	private void reset() {
+		gridView = (GridView) findViewById(R.id.gridView1);
+
+		String[] strArr = new String[81];
+		for (int i = 0; i < 81; i++) {
+			strArr[i] = new String("");
+		}
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+				R.layout.list_item, strArr);
+ 
+		gridView.setAdapter(adapter);
+	}
+
+
+	private String[] convert(int[][] numbers) {
+		String[] strNumbers = new String[81];
+		int count = 0;
+		for (int i = 0; i <9; i++) {
+			for (int j= 0; j < 9; j++) {
+				strNumbers[count++] = numbers[i][j] + "";
+			}
+		}
+		return strNumbers;
+	}
+
+
+
+}
